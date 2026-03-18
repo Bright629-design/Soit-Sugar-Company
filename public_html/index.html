@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soit Sugar Company – Sweetening Lives, Sustainably</title>
+    <meta name="description"
+        content="Soit Sugar Company is a modern, professional sugarcane processing factory in Kenya. We are committed to quality, sustainability, and community empowerment.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    fontFamily: {
+                        body: ['"PT Sans"', 'sans-serif'],
+                        headline: ['"PT Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen font-body antialiased home-page">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full transition-all duration-300 bg-transparent">
+        <div class="container mx-auto px-4 flex h-20 items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2" aria-label="Soit Sugar Home Page">
+                <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <nav class="flex items-center gap-6 text-sm font-medium">
+                    <a href="index.html" class="text-primary transition-colors hover:text-primary">Home</a>
+                    <a href="about.html" class="text-foreground/80 hover:text-primary transition-colors">About Us</a>
+                    <a href="products.html" class="text-foreground/80 hover:text-primary transition-colors">Products</a>
+                    <a href="sustainability.html"
+                        class="text-foreground/80 hover:text-primary transition-colors">Sustainability</a>
+                    <a href="farmers.html" class="text-foreground/80 hover:text-primary transition-colors">Our
+                        Farmers</a>
+                    <a href="news.html" class="text-foreground/80 hover:text-primary transition-colors">News</a>
+                    <a href="careers.html" class="text-foreground/80 hover:text-primary transition-colors">Careers</a>
+                    <a href="contact.html" class="text-foreground/80 hover:text-primary transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html#quote"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                        Request Quote
+                    </a>
+                    <a href="admin/login.html"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+                        Admin Login
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button data-mobile-menu-button
+                class="md:hidden inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                <i data-lucide="menu" class="h-6 w-6"></i>
+                <span class="sr-only">Open Menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div data-mobile-menu class="hidden fixed inset-0 z-50 bg-background/80 backdrop-blur-sm">
+            <div
+                class="fixed inset-y-0 left-0 z-50 h-full w-3/4 gap-4 border-r bg-background p-6 shadow-lg sm:max-w-sm">
+                <div class="flex flex-col gap-6">
+                    <div class="mb-4">
+                        <a href="index.html" class="flex items-center gap-2">
+                            <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                            <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+                        </a>
+                    </div>
+                    <nav class="flex flex-col gap-4">
+                        <a href="index.html" class="text-lg font-medium text-primary" data-close-menu>Home</a>
+                        <a href="about.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>About Us</a>
+                        <a href="products.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Products</a>
+                        <a href="sustainability.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Sustainability</a>
+                        <a href="farmers.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Our Farmers</a>
+                        <a href="news.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>News</a>
+                        <a href="careers.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Careers</a>
+                        <a href="contact.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Contact</a>
+                    </nav>
+                    <div class="mt-4 flex flex-col gap-4">
+                        <a href="contact.html#quote"
+                            class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                            data-close-menu>
+                            Request Quote
+                        </a>
+                        <a href="admin/login.html"
+                            class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+                            data-close-menu>
+                            Admin Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Close on click outside -->
+            <div class="absolute inset-0" data-close-menu></div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section
+            class="relative h-[95vh] min-h-[700px] w-full flex items-center justify-center text-center text-primary-foreground overflow-hidden">
+            <!-- Carousel Background -->
+            <div data-carousel class="absolute inset-0 w-full h-full">
+                <div data-carousel-item class="absolute inset-0 w-full h-full block transition-opacity duration-1000">
+                    <img src="../public/soit2.jpeg" alt="Soit Sugar background image 1"
+                        class="object-cover w-full h-full">
+                </div>
+                <div data-carousel-item class="absolute inset-0 w-full h-full hidden transition-opacity duration-1000">
+                    <img src="../public/home3.jpg" alt="Soit Sugar background image 2"
+                        class="object-cover w-full h-full">
+                </div>
+                <div data-carousel-item class="absolute inset-0 w-full h-full hidden transition-opacity duration-1000">
+                    <img src="../public/home4.jpg" alt="Soit Sugar background image 3"
+                        class="object-cover w-full h-full">
+                </div>
+                <div data-carousel-item class="absolute inset-0 w-full h-full hidden transition-opacity duration-1000">
+                    <img src="../public/soit8.jpg" alt="Soit Sugar background image 4"
+                        class="object-cover w-full h-full">
+                </div>
+                <div data-carousel-item class="absolute inset-0 w-full h-full hidden transition-opacity duration-1000">
+                    <img src="../public/soit9.jpg" alt="Soit Sugar background image 5"
+                        class="object-cover w-full h-full">
+                </div>
+            </div>
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20"></div>
+
+            <div class="relative z-10 max-w-5xl mx-auto px-4 space-y-6">
+                <h1 class="text-5xl md:text-7xl font-bold font-headline leading-tight tracking-tight drop-shadow-lg">
+                    Cultivating Sweetness, <br />
+                    Nurturing Communities
+                </h1>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-md">
+                    From the lush fields of Kenya, we bring you the finest, sustainably-produced sugar that enriches
+                    lives and empowers our communities.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="about.html"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8">
+                        Discover Our Story
+                    </a>
+                    <a href="products.html"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 rounded-md px-8">
+                        Explore Our Products
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="py-16 md:py-24 bg-background">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div class="relative group">
+                    <img src="../public/home1.jpg" alt="Soit Sugar Factory"
+                        class="rounded-lg shadow-xl object-cover w-full h-auto transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <div class="space-y-6">
+                    <h2 class="text-3xl md:text-4xl font-bold font-headline text-primary">
+                        A Legacy of Sweetness & Quality
+                    </h2>
+                    <p class="text-muted-foreground text-lg">
+                        Soit Sugar Company is more than just a factory; we are a community-driven enterprise dedicated
+                        to producing Kenya's finest sugar.
+                    </p>
+                    <p class="text-muted-foreground">
+                        Nestled in the heart of Kenya's sugar belt, our state-of-the-art facility combines modern
+                        technology with sustainable farming practices. We partner with local farmers to source the
+                        highest quality sugarcane, ensuring a sweet, pure product while uplifting our community and
+                        protecting our environment.
+                    </p>
+                    <a href="about.html"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                        Learn More About Us <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commitment Section -->
+        <section class="py-16 md:py-24 bg-muted/30">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold font-headline">
+                        Our Commitment
+                    </h2>
+                    <p class="mt-4 text-lg text-muted-foreground">
+                        We are founded on a steadfast commitment to excellence, sustainability, and community
+                        empowerment. These principles guide every decision we make.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Advantage 1 -->
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm text-center p-6 border-2 border-transparent hover:border-primary hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex flex-col space-y-1.5 p-6 items-center pt-0">
+                            <div class="bg-primary/10 p-4 rounded-full mb-4">
+                                <i data-lucide="leaf" class="h-8 w-8 text-primary"></i>
+                            </div>
+                            <h3 class="font-semibold tracking-tight font-headline text-xl">Unmatched Quality</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-muted-foreground text-sm">
+                                We adhere to the strictest international standards, using advanced technology to produce
+                                pure, high-quality sugar that consistently exceeds expectations.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Advantage 2 -->
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm text-center p-6 border-2 border-transparent hover:border-primary hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex flex-col space-y-1.5 p-6 items-center pt-0">
+                            <div class="bg-primary/10 p-4 rounded-full mb-4">
+                                <i data-lucide="recycle" class="h-8 w-8 text-primary"></i>
+                            </div>
+                            <h3 class="font-semibold tracking-tight font-headline text-xl">Sustainable Practices</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-muted-foreground text-sm">
+                                Our eco-friendly approach minimizes our environmental footprint by using renewable
+                                energy, recycling water, and promoting biodiversity on our farms.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Advantage 3 -->
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm text-center p-6 border-2 border-transparent hover:border-primary hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex flex-col space-y-1.5 p-6 items-center pt-0">
+                            <div class="bg-primary/10 p-4 rounded-full mb-4">
+                                <i data-lucide="users" class="h-8 w-8 text-primary"></i>
+                            </div>
+                            <h3 class="font-semibold tracking-tight font-headline text-xl">Community Empowerment</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-muted-foreground text-sm">
+                                We build strong, supportive partnerships with our farmers, providing them with the
+                                resources and training needed to thrive and uplift their communities.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Advantage 4 -->
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm text-center p-6 border-2 border-transparent hover:border-primary hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="flex flex-col space-y-1.5 p-6 items-center pt-0">
+                            <div class="bg-primary/10 p-4 rounded-full mb-4">
+                                <i data-lucide="cog" class="h-8 w-8 text-primary"></i>
+                            </div>
+                            <h3 class="font-semibold tracking-tight font-headline text-xl">Modern Technology</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-muted-foreground text-sm">
+                                Our state-of-the-art factory leverages cutting-edge technology for efficient, clean, and
+                                sustainable production, ensuring every grain of sugar is perfect.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold font-headline">
+                        Our Products
+                    </h2>
+                    <p class="mt-4 text-lg text-muted-foreground">
+                        From our fields to your table, we offer a range of premium sugar products crafted with the
+                        utmost care and quality.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col overflow-hidden group border-2">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden h-64">
+                            <img src="../public/sugarproducts1.webp" alt="Refined White Sugar"
+                                class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-col space-y-1.5 p-0 mb-2">
+                                <h3 class="font-semibold tracking-tight font-headline text-2xl">Refined White Sugar</h3>
+                            </div>
+                            <div class="p-0 flex-grow">
+                                <p class="text-muted-foreground text-sm">
+                                    High-purity, fine granulated sugar for all your baking and beverage needs.
+                                </p>
+                            </div>
+                            <div class="flex items-center p-0 pt-6">
+                                <a href="products.html#refined-white-sugar"
+                                    class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                                    View Details <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col overflow-hidden group border-2">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden h-64">
+                            <img src="../public/product2.jpg" alt="Natural Brown Sugar"
+                                class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-col space-y-1.5 p-0 mb-2">
+                                <h3 class="font-semibold tracking-tight font-headline text-2xl">Natural Brown Sugar</h3>
+                            </div>
+                            <div class="p-0 flex-grow">
+                                <p class="text-muted-foreground text-sm">
+                                    Unrefined brown sugar with a rich molasses flavor, perfect for rustic baking.
+                                </p>
+                            </div>
+                            <div class="flex items-center p-0 pt-6">
+                                <a href="products.html#natural-brown-sugar"
+                                    class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                                    View Details <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div
+                        class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col overflow-hidden group border-2">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden h-64">
+                            <img src="../public/product4.jpg" alt="Sugarcane Syrup"
+                                class="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex flex-col space-y-1.5 p-0 mb-2">
+                                <h3 class="font-semibold tracking-tight font-headline text-2xl">Sugarcane Syrup</h3>
+                            </div>
+                            <div class="p-0 flex-grow">
+                                <p class="text-muted-foreground text-sm">
+                                    A sweet and versatile syrup made from pure sugarcane juice.
+                                </p>
+                            </div>
+                            <div class="flex items-center p-0 pt-6">
+                                <a href="products.html#sugarcane-syrup"
+                                    class="w-full inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                                    View Details <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 md:py-32 bg-primary text-primary-foreground">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-headline">
+                    Ready to Partner with Soit Sugar?
+                </h2>
+                <p class="mt-4 text-lg max-w-3xl mx-auto">
+                    Whether you are a farmer, distributor, or a business looking for high-quality sugar, we are ready to
+                    build a sweet future together. Contact us to learn more.
+                </p>
+                <div class="mt-8">
+                    <a href="contact.html#quote"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 rounded-md px-8">
+                        Get a Free Quote Today
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-muted/40 border-t">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center gap-2" aria-label="Soit Sugar Home Page">
+                        <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                        <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+                    </a>
+                    <p class="text-sm text-muted-foreground">
+                        Sweetening lives, sustainably. We are a leading sugarcane processing factory in Kenya, committed
+                        to quality and community.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="products.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Our Products</a></li>
+                        <li><a href="sustainability.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Sustainability</a>
+                        </li>
+                        <li><a href="farmers.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Our Farmers</a></li>
+                        <li><a href="news.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">News</a></li>
+                        <li><a href="careers.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <span class="text-muted-foreground">Soit Sugar Factory, Soit, Kenya</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <a href="tel:+254123456789"
+                                class="text-muted-foreground hover:text-primary transition-colors">+254 123 456 789</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <a href="mailto:info@soitsugar.co.ke"
+                                class="text-muted-foreground hover:text-primary transition-colors">info@soitsugar.co.ke</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Newsletter</h4>
+                    <p class="text-sm text-muted-foreground">Stay updated with our latest news and offers.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Your email"
+                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            aria-label="Email for newsletter">
+                        <button type="submit"
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-border my-8"></div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
+                <p>&copy; 2024 Soit Sugar Company. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

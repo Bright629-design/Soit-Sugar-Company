@@ -1,0 +1,112 @@
+{
+  "placeholderImages": [
+    {
+      "id": "home-hero",
+      "description": "A beautiful landscape of a sugarcane field under a clear sky.",
+      "imageUrl": "https://images.unsplash.com/photo-1606707761700-86b58f251a01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzdWdhcmNhbmUlMjBmaWVsZHxlbnwwfHx8fDE3NjMwNDA3Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sugarcane field"
+    },
+    {
+      "id": "about-history",
+      "description": "An image depicting the history of the sugar factory.",
+      "imageUrl": "https://images.unsplash.com/photo-1671351966406-8b2d1236dead?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYWN0b3J5JTIwaGlzdG9yeXxlbnwwfHx8fDE3NjMxMTkyOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "factory history"
+    },
+    {
+      "id": "about-sourcing",
+      "description": "A farmer working in a sugarcane field.",
+      "imageUrl": "https://images.unsplash.com/photo-1606711381828-eca2adb3b180?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmYXJtZXIlMjBzdWdhcmNhbmV8ZW58MHx8fHwxNzYzMTE5Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "farmer sugarcane"
+    },
+    {
+      "id": "about-sustainability",
+      "description": "A symbol of sustainability with a green leaf.",
+      "imageUrl": "https://images.unsplash.com/photo-1613665641266-7bb90dd86a8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxncmVlbiUyMGVuZXJneXxlbnwwfHx8fDE3NjMwNTcwODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "green energy"
+    },
+    {
+      "id": "about-quality",
+      "description": "A scientist working in a modern laboratory.",
+      "imageUrl": "https://images.unsplash.com/photo-1614934273187-c83f8780fad9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYWJvcmF0b3J5JTIwc2NpZW5jZXxlbnwwfHx8fDE3NjMwOTQyOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laboratory science"
+    },
+    {
+      "id": "product-refined-white",
+      "description": "A clean package of refined white sugar.",
+      "imageUrl": "https://images.unsplash.com/photo-1761426079132-c2c9978b9514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdWdhciUyMHBhY2tldHxlbnwwfHx8fDE3NjMwMzg2NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sugar packet"
+    },
+    {
+      "id": "product-brown-sugar",
+      "description": "A package of natural brown sugar.",
+      "imageUrl": "https://images.unsplash.com/photo-1558985212-fdbd3c3eb611?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxicm93biUyMHN1Z2FyfGVufDB8fHx8MTc2MzExOTI5OHww&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "brown sugar"
+    },
+    {
+      "id": "product-syrup",
+      "description": "A bottle of sweet sugarcane syrup.",
+      "imageUrl": "https://images.unsplash.com/photo-1700104494950-b2ca510a3dd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3lydXAlMjBib3R0bGV8ZW58MHx8fHwxNzYzMTA5MDYxfDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "syrup bottle"
+    },
+    {
+      "id": "sustainability-practices",
+      "description": "An image representing eco-friendly practices.",
+      "imageUrl": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cmVuZXdhYmxlJTIwZW5lcmd5fGVufDB8fHx8MTc2MzA5ODk4M3ww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "renewable energy"
+    },
+    {
+      "id": "sustainability-manufacturing",
+      "description": "A modern, clean factory production line.",
+      "imageUrl": "https://images.unsplash.com/photo-1699221956369-b805bcd51772?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmYWN0b3J5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzYzMTE5Mjk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "factory interior"
+    },
+    {
+      "id": "sustainability-community",
+      "description": "A group of people from the community.",
+      "imageUrl": "https://images.unsplash.com/photo-1723202594781-640f7b591641?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21tdW5pdHklMjBwZW9wbGV8ZW58MHx8fHwxNzYzMDk4MzgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "community people"
+    },
+    {
+      "id": "factory-exterior",
+      "description": "The exterior of the Soit Sugar Company factory.",
+      "imageUrl": "https://images.unsplash.com/photo-1682868062649-438f3b8aa875?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwZmFjdG9yeXxlbnwwfHx8fDE3NjMwMDUyODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern factory"
+    },
+    {
+      "id": "farmers-hero",
+      "description": "A farmer in a sugarcane field.",
+      "imageUrl": "/farmers1.png",
+      "imageHint": "sugarcane farmer"
+    },
+    {
+      "id": "farmers-support",
+      "description": "Two farmers discussing in a sugarcane field.",
+      "imageUrl": "/farmers2.png",
+      "imageHint": "farmers talking"
+    },
+    {
+      "id": "farmers-impact",
+      "description": "A smiling farmer in a field.",
+      "imageUrl": "/farmers3.png",
+      "imageHint": "happy farmer"
+    },
+    {
+      "id": "news-hero",
+      "description": "A collage of news headlines and articles.",
+      "imageUrl": "https://images.unsplash.com/photo-1713948414133-c2cf74951e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxuZXdzJTIwY29sbGFnZXxlbnwwfHx8fDE3NjMwMjQxNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "news collage"
+    },
+    {
+      "id": "careers-hero",
+      "description": "A diverse team of professionals collaborating in a modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8b2ZmaWNlJTIwdGVhbXxlbnwwfHx8fDE3NjMxMDIyNTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office team"
+    },
+    {
+      "id": "careers-culture",
+      "description": "Employees participating in a team-building activity.",
+      "imageUrl": "https://images.unsplash.com/photo-1598015132635-131afe3ba07f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVhbSUyMGJ1aWxkaW5nfGVufDB8fHx8MTc2MzAyMzM0N3ww&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "team building"
+    }
+  ]
+}

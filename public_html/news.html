@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Soit Sugar Company</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    fontFamily: {
+                        body: ['"PT Sans"', 'sans-serif'],
+                        headline: ['"PT Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen font-body antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b bg-background">
+        <div class="container mx-auto px-4 flex h-20 items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2" aria-label="Soit Sugar Home Page">
+                <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <nav class="flex items-center gap-6 text-sm font-medium">
+                    <a href="index.html" class="text-foreground/80 hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-foreground/80 hover:text-primary transition-colors">About Us</a>
+                    <a href="products.html" class="text-foreground/80 hover:text-primary transition-colors">Products</a>
+                    <a href="sustainability.html"
+                        class="text-foreground/80 hover:text-primary transition-colors">Sustainability</a>
+                    <a href="farmers.html" class="text-foreground/80 hover:text-primary transition-colors">Our
+                        Farmers</a>
+                    <a href="news.html" class="text-primary transition-colors hover:text-primary">News</a>
+                    <a href="careers.html" class="text-foreground/80 hover:text-primary transition-colors">Careers</a>
+                    <a href="contact.html" class="text-foreground/80 hover:text-primary transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html#quote"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                        Request Quote
+                    </a>
+                </div>
+            </div>
+
+            <button data-mobile-menu-button
+                class="md:hidden inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div data-mobile-menu class="hidden fixed inset-0 z-50 bg-background/80 backdrop-blur-sm">
+            <div
+                class="fixed inset-y-0 left-0 z-50 h-full w-3/4 gap-4 border-r bg-background p-6 shadow-lg sm:max-w-sm">
+                <div class="flex flex-col gap-6">
+                    <div class="mb-4">
+                        <a href="index.html" class="flex items-center gap-2">
+                            <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                            <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+                        </a>
+                    </div>
+                    <nav class="flex flex-col gap-4">
+                        <a href="index.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Home</a>
+                        <a href="about.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>About Us</a>
+                        <a href="products.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Products</a>
+                        <a href="sustainability.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Sustainability</a>
+                        <a href="farmers.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Our Farmers</a>
+                        <a href="news.html" class="text-lg font-medium text-primary" data-close-menu>News</a>
+                        <a href="careers.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Careers</a>
+                        <a href="contact.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Contact</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="absolute inset-0" data-close-menu></div>
+        </div>
+    </header>
+
+    <main>
+        <header class="bg-primary/80 text-primary-foreground py-20 md:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold font-headline">
+                    News & Updates
+                </h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto">
+                    Stay informed about the latest developments, stories, and announcements from Soit Sugar Company.
+                </p>
+            </div>
+        </header>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article 1 -->
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="font-semibold leading-none tracking-tight font-headline text-xl leading-snug">
+                                <a href="#" class="hover:text-primary transition-colors">
+                                    Soit Sugar Factory Nears Completion, Promises Economic Boost for Narok County
+                                </a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-sm text-muted-foreground pt-2">
+                                <i data-lucide="calendar" class="h-4 w-4"></i>
+                                <span>October 26, 2024</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex-grow">
+                            <p class="text-muted-foreground text-sm">The highly anticipated Soit Sugar Factory is on
+                                track to begin operations by year-end, a project that promises to create hundreds of
+                                jobs and boost the local economy...</p>
+                        </div>
+                        <div class="flex items-center p-6 pt-0">
+                            <a href="#"
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline p-0 h-auto">
+                                Read More <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="font-semibold leading-none tracking-tight font-headline text-xl leading-snug">
+                                <a href="#" class="hover:text-primary transition-colors">
+                                    New Farmer Support Program Launched to Increase Sugarcane Yields
+                                </a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-sm text-muted-foreground pt-2">
+                                <i data-lucide="calendar" class="h-4 w-4"></i>
+                                <span>October 15, 2024</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex-grow">
+                            <p class="text-muted-foreground text-sm">Soit Sugar Company today launched a comprehensive
+                                support program for its partner farmers, offering training, quality inputs, and
+                                financial services...</p>
+                        </div>
+                        <div class="flex items-center p-6 pt-0">
+                            <a href="#"
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline p-0 h-auto">
+                                Read More <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="font-semibold leading-none tracking-tight font-headline text-xl leading-snug">
+                                <a href="#" class="hover:text-primary transition-colors">
+                                    Sustainability at its Core: Soit Sugar Invests in Green Energy
+                                </a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-sm text-muted-foreground pt-2">
+                                <i data-lucide="calendar" class="h-4 w-4"></i>
+                                <span>September 30, 2024</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex-grow">
+                            <p class="text-muted-foreground text-sm">In a major step towards environmental
+                                sustainability, the company announced its plans to power the factory using bagasse, a
+                                byproduct of sugarcane processing...</p>
+                        </div>
+                        <div class="flex items-center p-6 pt-0">
+                            <a href="#"
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline p-0 h-auto">
+                                Read More <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="font-semibold leading-none tracking-tight font-headline text-xl leading-snug">
+                                <a href="#" class="hover:text-primary transition-colors">
+                                    Community First: Soit Sugar Funds New School Block
+                                </a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-sm text-muted-foreground pt-2">
+                                <i data-lucide="calendar" class="h-4 w-4"></i>
+                                <span>September 12, 2024</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex-grow">
+                            <p class="text-muted-foreground text-sm">As part of its corporate social responsibility,
+                                Soit Sugar has funded the construction of a new classroom block at a local primary
+                                school...</p>
+                        </div>
+                        <div class="flex items-center p-6 pt-0">
+                            <a href="#"
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline p-0 h-auto">
+                                Read More <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 5 -->
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="font-semibold leading-none tracking-tight font-headline text-xl leading-snug">
+                                <a href="#" class="hover:text-primary transition-colors">
+                                    Record Harvest Expected as Farmers Embrace Modern Techniques
+                                </a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-sm text-muted-foreground pt-2">
+                                <i data-lucide="calendar" class="h-4 w-4"></i>
+                                <span>August 28, 2024</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex-grow">
+                            <p class="text-muted-foreground text-sm">Local farmers partnered with Soit Sugar are
+                                anticipating a record harvest this season, thanks to the adoption of modern agricultural
+                                practices...</p>
+                        </div>
+                        <div class="flex items-center p-6 pt-0">
+                            <a href="#"
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline p-0 h-auto">
+                                Read More <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 6 -->
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm flex flex-col">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <h3 class="font-semibold leading-none tracking-tight font-headline text-xl leading-snug">
+                                <a href="#" class="hover:text-primary transition-colors">
+                                    Soit Sugar to Participate in Annual Agribusiness Expo
+                                </a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-sm text-muted-foreground pt-2">
+                                <i data-lucide="calendar" class="h-4 w-4"></i>
+                                <span>August 05, 2024</span>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex-grow">
+                            <p class="text-muted-foreground text-sm">The company will be showcasing its products and
+                                farmer partnership models at the upcoming national agribusiness expo in Nairobi...</p>
+                        </div>
+                        <div class="flex items-center p-6 pt-0">
+                            <a href="#"
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline p-0 h-auto">
+                                Read More <i data-lucide="move-right" class="ml-2 h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-muted/40 border-t">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center gap-2" aria-label="Soit Sugar Home Page">
+                        <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                        <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+                    </a>
+                    <p class="text-sm text-muted-foreground">
+                        Sweetening lives, sustainably. We are a leading sugarcane processing factory in Kenya, committed
+                        to quality and community.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="products.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Our Products</a></li>
+                        <li><a href="sustainability.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Sustainability</a>
+                        </li>
+                        <li><a href="farmers.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Our Farmers</a></li>
+                        <li><a href="news.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">News</a></li>
+                        <li><a href="careers.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <span class="text-muted-foreground">Soit Sugar Factory, Soit, Kenya</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <a href="tel:+254123456789"
+                                class="text-muted-foreground hover:text-primary transition-colors">+254 123 456 789</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <a href="mailto:info@soitsugar.co.ke"
+                                class="text-muted-foreground hover:text-primary transition-colors">info@soitsugar.co.ke</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Newsletter</h4>
+                    <p class="text-sm text-muted-foreground">Stay updated with our latest news and offers.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Your email"
+                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            aria-label="Email for newsletter">
+                        <button type="submit"
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-border my-8"></div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
+                <p>&copy; 2024 Soit Sugar Company. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

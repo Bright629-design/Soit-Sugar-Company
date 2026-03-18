@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Soit Sugar Company</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    fontFamily: {
+                        body: ['"PT Sans"', 'sans-serif'],
+                        headline: ['"PT Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen font-body antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b bg-background">
+        <div class="container mx-auto px-4 flex h-20 items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2" aria-label="Soit Sugar Home Page">
+                <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <nav class="flex items-center gap-6 text-sm font-medium">
+                    <a href="index.html" class="text-foreground/80 hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-foreground/80 hover:text-primary transition-colors">About Us</a>
+                    <a href="products.html" class="text-foreground/80 hover:text-primary transition-colors">Products</a>
+                    <a href="sustainability.html"
+                        class="text-foreground/80 hover:text-primary transition-colors">Sustainability</a>
+                    <a href="farmers.html" class="text-foreground/80 hover:text-primary transition-colors">Our
+                        Farmers</a>
+                    <a href="news.html" class="text-foreground/80 hover:text-primary transition-colors">News</a>
+                    <a href="careers.html" class="text-foreground/80 hover:text-primary transition-colors">Careers</a>
+                    <a href="contact.html" class="text-primary transition-colors hover:text-primary">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html#quote"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                        Request Quote
+                    </a>
+                </div>
+            </div>
+
+            <button data-mobile-menu-button
+                class="md:hidden inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div data-mobile-menu class="hidden fixed inset-0 z-50 bg-background/80 backdrop-blur-sm">
+            <div
+                class="fixed inset-y-0 left-0 z-50 h-full w-3/4 gap-4 border-r bg-background p-6 shadow-lg sm:max-w-sm">
+                <div class="flex flex-col gap-6">
+                    <div class="mb-4">
+                        <a href="index.html" class="flex items-center gap-2">
+                            <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                            <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+                        </a>
+                    </div>
+                    <nav class="flex flex-col gap-4">
+                        <a href="index.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Home</a>
+                        <a href="about.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>About Us</a>
+                        <a href="products.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Products</a>
+                        <a href="sustainability.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Sustainability</a>
+                        <a href="farmers.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Our Farmers</a>
+                        <a href="news.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>News</a>
+                        <a href="careers.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Careers</a>
+                        <a href="contact.html" class="text-lg font-medium text-primary" data-close-menu>Contact</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="absolute inset-0" data-close-menu></div>
+        </div>
+    </header>
+
+    <main>
+        <header class="bg-primary/80 text-primary-foreground py-20 md:py-32">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold font-headline">
+                    Get in Touch
+                </h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto">
+                    We're here to help. Whether you have a question about our products or want to request a quote, we'd
+                    love to hear from you.
+                </p>
+            </div>
+        </header>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm text-center">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <div class="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-2">
+                                <i data-lucide="phone" class="h-8 w-8 text-primary"></i>
+                            </div>
+                            <h3 class="font-semibold tracking-tight text-xl">By Phone</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-muted-foreground">Monday - Friday, 9am - 5pm</p>
+                            <a href="tel:+254123456789" class="text-lg font-semibold text-primary hover:underline">
+                                +254 123 456 789
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm text-center">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <div class="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-2">
+                                <i data-lucide="mail" class="h-8 w-8 text-primary"></i>
+                            </div>
+                            <h3 class="font-semibold tracking-tight text-xl">By Email</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-muted-foreground">We'll respond within 24 hours</p>
+                            <a href="mailto:info@soitsugar.co.ke"
+                                class="text-lg font-semibold text-primary hover:underline">
+                                info@soitsugar.co.ke
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rounded-lg border bg-card text-card-foreground shadow-sm text-center">
+                        <div class="flex flex-col space-y-1.5 p-6">
+                            <div class="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-2">
+                                <i data-lucide="message-circle" class="h-8 w-8 text-primary"></i>
+                            </div>
+                            <h3 class="font-semibold tracking-tight text-xl">Via WhatsApp</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-muted-foreground">For quick questions & support</p>
+                            <a href="https://wa.me/254123456789" target="_blank" rel="noopener noreferrer"
+                                class="text-lg font-semibold text-primary hover:underline">
+                                Click to Chat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div id="quote">
+                        <h2 class="text-3xl font-bold font-headline mb-6">Send an Inquiry</h2>
+                        <form class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <label for="name"
+                                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Full
+                                        Name</label>
+                                    <input id="name" placeholder="John Doe"
+                                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="email"
+                                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email
+                                        Address</label>
+                                    <input id="email" type="email" placeholder="john.doe@example.com"
+                                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="phone"
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Phone
+                                    Number</label>
+                                <input id="phone" type="tel" placeholder="+254 700 000 000"
+                                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="subject"
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Subject</label>
+                                <input id="subject" placeholder="e.g., Bulk Order Quote"
+                                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="message"
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Message</label>
+                                <textarea id="message" rows="5"
+                                    placeholder="Please provide details about your inquiry..."
+                                    class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"></textarea>
+                            </div>
+                            <div class="flex justify-start">
+                                <button type="submit"
+                                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8">Send
+                                    Message</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <h2 class="text-3xl font-bold font-headline mb-6">Our Location</h2>
+                        <div class="aspect-video w-full bg-muted rounded-lg overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.659103986912!2d35.85805557496466!3d-0.4218909995574841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182a5301824a7b57%3A0x95c372255531d275!2sSoit%20Sugar%20Company%20Limited!5e0!3m2!1sen!2ske!4v1720542301842!5m2!1sen!2ske"
+                                width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Soit Sugar Company Location"></iframe>
+                        </div>
+                        <p class="text-muted-foreground mt-4">Soit Sugar Company Limited, Soit, Kenya</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-muted/40 border-t">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center gap-2" aria-label="Soit Sugar Home Page">
+                        <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                        <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+                    </a>
+                    <p class="text-sm text-muted-foreground">
+                        Sweetening lives, sustainably. We are a leading sugarcane processing factory in Kenya, committed
+                        to quality and community.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="products.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Our Products</a></li>
+                        <li><a href="sustainability.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Sustainability</a>
+                        </li>
+                        <li><a href="farmers.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Our Farmers</a></li>
+                        <li><a href="news.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">News</a></li>
+                        <li><a href="careers.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <span class="text-muted-foreground">Soit Sugar Factory, Soit, Kenya</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <a href="tel:+254123456789"
+                                class="text-muted-foreground hover:text-primary transition-colors">+254 123 456 789</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <a href="mailto:info@soitsugar.co.ke"
+                                class="text-muted-foreground hover:text-primary transition-colors">info@soitsugar.co.ke</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Newsletter</h4>
+                    <p class="text-sm text-muted-foreground">Stay updated with our latest news and offers.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Your email"
+                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            aria-label="Email for newsletter">
+                        <button type="submit"
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-border my-8"></div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
+                <p>&copy; 2024 Soit Sugar Company. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

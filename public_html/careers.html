@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Soit Sugar Company</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    fontFamily: {
+                        body: ['"PT Sans"', 'sans-serif'],
+                        headline: ['"PT Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="min-h-screen font-body antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b bg-background">
+        <div class="container mx-auto px-4 flex h-20 items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2" aria-label="Soit Sugar Home Page">
+                <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <nav class="flex items-center gap-6 text-sm font-medium">
+                    <a href="index.html" class="text-foreground/80 hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="text-foreground/80 hover:text-primary transition-colors">About Us</a>
+                    <a href="products.html" class="text-foreground/80 hover:text-primary transition-colors">Products</a>
+                    <a href="sustainability.html"
+                        class="text-foreground/80 hover:text-primary transition-colors">Sustainability</a>
+                    <a href="farmers.html" class="text-foreground/80 hover:text-primary transition-colors">Our
+                        Farmers</a>
+                    <a href="news.html" class="text-foreground/80 hover:text-primary transition-colors">News</a>
+                    <a href="careers.html" class="text-primary transition-colors hover:text-primary">Careers</a>
+                    <a href="contact.html" class="text-foreground/80 hover:text-primary transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html#quote"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                        Request Quote
+                    </a>
+                </div>
+            </div>
+
+            <button data-mobile-menu-button
+                class="md:hidden inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10">
+                <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div data-mobile-menu class="hidden fixed inset-0 z-50 bg-background/80 backdrop-blur-sm">
+            <div
+                class="fixed inset-y-0 left-0 z-50 h-full w-3/4 gap-4 border-r bg-background p-6 shadow-lg sm:max-w-sm">
+                <div class="flex flex-col gap-6">
+                    <div class="mb-4">
+                        <a href="index.html" class="flex items-center gap-2">
+                            <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                            <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+                        </a>
+                    </div>
+                    <nav class="flex flex-col gap-4">
+                        <a href="index.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Home</a>
+                        <a href="about.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>About Us</a>
+                        <a href="products.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Products</a>
+                        <a href="sustainability.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Sustainability</a>
+                        <a href="farmers.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Our Farmers</a>
+                        <a href="news.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>News</a>
+                        <a href="careers.html" class="text-lg font-medium text-primary" data-close-menu>Careers</a>
+                        <a href="contact.html" class="text-lg font-medium text-foreground hover:text-primary"
+                            data-close-menu>Contact</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="absolute inset-0" data-close-menu></div>
+        </div>
+    </header>
+
+    <main>
+        <header class="relative bg-primary/80 text-primary-foreground py-20 md:py-32 overflow-hidden">
+            <img src="../public/careers1.jpg" alt="A diverse team of professionals working together"
+                class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20"></div>
+            <div class="container mx-auto px-4 relative text-center">
+                <h1 class="text-4xl md:text-5xl font-bold font-headline">
+                    Join Our Team
+                </h1>
+                <p class="mt-4 text-lg max-w-3xl mx-auto">
+                    Become a part of a dynamic company dedicated to quality, innovation, and making a positive impact in
+                    our community.
+                </p>
+            </div>
+        </header>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold font-headline text-primary">
+                        Grow With Us
+                    </h2>
+                    <p class="text-muted-foreground">
+                        At Soit Sugar, we believe our people are our greatest asset. We are committed to fostering a
+                        workplace culture that is inclusive, challenging, and rewarding. We provide opportunities for
+                        professional growth and encourage our team to innovate and take initiative.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="bg-muted/50 rounded-full px-4 py-2 text-sm font-medium">Integrity</div>
+                        <div class="bg-muted/50 rounded-full px-4 py-2 text-sm font-medium">Innovation</div>
+                        <div class="bg-muted/50 rounded-full px-4 py-2 text-sm font-medium">Community</div>
+                        <div class="bg-muted/50 rounded-full px-4 py-2 text-sm font-medium">Quality</div>
+                        <div class="bg-muted/50 rounded-full px-4 py-2 text-sm font-medium">Sustainability</div>
+                        <div class="bg-muted/50 rounded-full px-4 py-2 text-sm font-medium">Teamwork</div>
+                    </div>
+                </div>
+                <img src="../public/careers2.jpg" alt="Employees collaborating in a modern office"
+                    class="rounded-lg shadow-lg object-cover w-full h-auto">
+            </div>
+        </section>
+
+        <section id="openings" class="py-16 md:py-24 bg-card">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold font-headline">
+                        Current Openings
+                    </h2>
+                    <p class="mt-4 text-lg text-muted-foreground">
+                        Find your next career opportunity at Soit Sugar Company. If you don't see a suitable role, feel
+                        free to send us a speculative application.
+                    </p>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <!-- Job 1 -->
+                    <div class="border rounded-lg p-4">
+                        <button
+                            class="flex w-full items-center justify-between text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+                            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')">
+                            <div>
+                                <h3 class="text-lg font-semibold text-primary">Agricultural Extension Officer</h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mt-1">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="briefcase" class="h-4 w-4"></i>
+                                        <span>Farmer Relations</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="map-pin" class="h-4 w-4"></i>
+                                        <span>Transmara, Kenya</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="clock" class="h-4 w-4"></i>
+                                        <span>Full-time</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-down"
+                                class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                        </button>
+                        <div class="hidden pt-4 text-sm text-muted-foreground">
+                            <div class="space-y-4 pt-2">
+                                <p>Responsible for training and supporting our partner farmers. Requires a degree in
+                                    Agriculture and 3+ years of experience.</p>
+                                <button
+                                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Apply
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="border rounded-lg p-4">
+                        <button
+                            class="flex w-full items-center justify-between text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+                            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')">
+                            <div>
+                                <h3 class="text-lg font-semibold text-primary">Quality Assurance Technician</h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mt-1">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="briefcase" class="h-4 w-4"></i>
+                                        <span>Laboratory</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="map-pin" class="h-4 w-4"></i>
+                                        <span>Soit Factory, Narok</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="clock" class="h-4 w-4"></i>
+                                        <span>Full-time</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-down"
+                                class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                        </button>
+                        <div class="hidden pt-4 text-sm text-muted-foreground">
+                            <div class="space-y-4 pt-2">
+                                <p>Conduct tests to ensure our products meet the highest quality standards. Diploma in
+                                    Food Science or related field required.</p>
+                                <button
+                                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Apply
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="border rounded-lg p-4">
+                        <button
+                            class="flex w-full items-center justify-between text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+                            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')">
+                            <div>
+                                <h3 class="text-lg font-semibold text-primary">Mechanical Engineer</h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mt-1">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="briefcase" class="h-4 w-4"></i>
+                                        <span>Factory Operations</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="map-pin" class="h-4 w-4"></i>
+                                        <span>Soit Factory, Narok</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="clock" class="h-4 w-4"></i>
+                                        <span>Full-time</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-down"
+                                class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                        </button>
+                        <div class="hidden pt-4 text-sm text-muted-foreground">
+                            <div class="space-y-4 pt-2">
+                                <p>Oversee the maintenance and optimization of factory machinery. Degree in Mechanical
+                                    Engineering and 5+ years in a manufacturing environment.</p>
+                                <button
+                                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Apply
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="border rounded-lg p-4">
+                        <button
+                            class="flex w-full items-center justify-between text-left font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+                            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')">
+                            <div>
+                                <h3 class="text-lg font-semibold text-primary">Supply Chain Coordinator</h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mt-1">
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="briefcase" class="h-4 w-4"></i>
+                                        <span>Logistics</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="map-pin" class="h-4 w-4"></i>
+                                        <span>Nairobi Office</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <i data-lucide="clock" class="h-4 w-4"></i>
+                                        <span>Full-time</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <i data-lucide="chevron-down"
+                                class="h-4 w-4 shrink-0 transition-transform duration-200"></i>
+                        </button>
+                        <div class="hidden pt-4 text-sm text-muted-foreground">
+                            <div class="space-y-4 pt-2">
+                                <p>Manage the end-to-end supply chain from farm to customer. Experience in logistics and
+                                    supply chain management is essential.</p>
+                                <button
+                                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Apply
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-muted-foreground mb-4">Don't see a role that fits? Send your CV to our careers team.
+                    </p>
+                    <a href="mailto:careers@soitsugar.co.ke"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 rounded-md px-8">
+                        Submit Speculative Application
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-muted/40 border-t">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center gap-2" aria-label="Soit Sugar Home Page">
+                        <i data-lucide="leaf" class="h-7 w-7 text-primary"></i>
+                        <span class="text-xl font-bold text-foreground">Soit Sugar</span>
+                    </a>
+                    <p class="text-sm text-muted-foreground">
+                        Sweetening lives, sustainably. We are a leading sugarcane processing factory in Kenya, committed
+                        to quality and community.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="products.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Our Products</a></li>
+                        <li><a href="sustainability.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Sustainability</a>
+                        </li>
+                        <li><a href="farmers.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Our Farmers</a></li>
+                        <li><a href="news.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">News</a></li>
+                        <li><a href="careers.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-muted-foreground hover:text-primary transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <span class="text-muted-foreground">Soit Sugar Factory, Soit, Kenya</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <a href="tel:+254123456789"
+                                class="text-muted-foreground hover:text-primary transition-colors">+254 123 456 789</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="h-4 w-4 mt-1 shrink-0 text-primary"></i>
+                            <a href="mailto:info@soitsugar.co.ke"
+                                class="text-muted-foreground hover:text-primary transition-colors">info@soitsugar.co.ke</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-foreground">Newsletter</h4>
+                    <p class="text-sm text-muted-foreground">Stay updated with our latest news and offers.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Your email"
+                            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            aria-label="Email for newsletter">
+                        <button type="submit"
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-border my-8"></div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
+                <p>&copy; 2024 Soit Sugar Company. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
