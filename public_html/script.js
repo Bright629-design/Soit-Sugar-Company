@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'refined-white-sugar',
             name: 'Refined White Sugar',
             description: 'High-purity, fine granulated sugar for all your baking and beverage needs.',
-            imageId: '../public/product-refined-white.jpg',
+            imageId: 'images/product-refined-white.jpg',
             specifications: [
                 { key: 'Polarization', value: '99.8% min' },
                 { key: 'Moisture', value: '0.04% max' },
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'natural-brown-sugar',
             name: 'Natural Brown Sugar',
             description: 'Unrefined brown sugar with a rich molasses flavor, perfect for rustic baking.',
-            imageId: '../public/product-brown-sugar.jpg',
+            imageId: 'images/product-brown-sugar.jpg',
             specifications: [
                 { key: 'Polarization', value: '97.5% min' },
                 { key: 'Moisture', value: '0.25% max' },
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'sugarcane-syrup',
             name: 'Sugarcane Syrup',
             description: 'A sweet and versatile syrup made from pure sugarcane juice.',
-            imageId: '../public/product-syrup.jpg',
+            imageId: 'images/product-syrup.jpg',
             specifications: [
                 { key: 'Brix', value: '79.5 - 80.5' },
                 { key: 'pH', value: '5.0 - 5.5' },
