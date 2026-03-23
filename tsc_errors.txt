@@ -1,0 +1,14 @@
+.next/types/app/products/[id]/page.ts(34,29): error TS2344: Type 'Props' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+src/app/careers/page.tsx(133,29): error TS2322: Type '{ children: Element[]; className: string; onclick: string; }' is not assignable to type 'DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>'.
+  Property 'onclick' does not exist on type 'DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>'. Did you mean 'onClick'?
+src/app/careers/page.tsx(170,29): error TS2322: Type '{ children: Element[]; className: string; onclick: string; }' is not assignable to type 'DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>'.
+  Property 'onclick' does not exist on type 'DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>'. Did you mean 'onClick'?
+src/app/careers/page.tsx(207,29): error TS2322: Type '{ children: Element[]; className: string; onclick: string; }' is not assignable to type 'DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>'.
+  Property 'onclick' does not exist on type 'DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>'. Did you mean 'onClick'?
+src/app/careers/page.tsx(244,29): error TS2322: Type '{ children: Element[]; className: string; onclick: string; }' is not assignable to type 'DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>'.
+  Property 'onclick' does not exist on type 'DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>'. Did you mean 'onClick'?
+src/app/contact/page.tsx(120,56): error TS2322: Type 'string' is not assignable to type 'number'.
+src/app/contact/page.tsx(137,83): error TS2322: Type '{ src: string; width: string; height: string; style: { border: string; }; allowfullscreen: string; loading: "lazy"; referrerpolicy: string; title: string; }' is not assignable to type 'DetailedHTMLProps<IframeHTMLAttributes<HTMLIFrameElement>, HTMLIFrameElement>'.
+  Property 'allowfullscreen' does not exist on type 'DetailedHTMLProps<IframeHTMLAttributes<HTMLIFrameElement>, HTMLIFrameElement>'. Did you mean 'allowFullScreen'?

@@ -33,19 +33,19 @@
     {
       "id": "product-refined-white",
       "description": "A clean package of refined white sugar.",
-      "imageUrl": "https://images.unsplash.com/photo-1761426079132-c2c9978b9514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdWdhciUyMHBhY2tldHxlbnwwfHx8fDE3NjMwMzg2NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/sugarproducts1.webp",
       "imageHint": "sugar packet"
     },
     {
       "id": "product-brown-sugar",
       "description": "A package of natural brown sugar.",
-      "imageUrl": "https://images.unsplash.com/photo-1558985212-fdbd3c3eb611?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxicm93biUyMHN1Z2FyfGVufDB8fHx8MTc2MzExOTI5OHww&ixlibrb-4.1.0&q=80&w=1080",
+      "imageUrl": "/product2.jpg",
       "imageHint": "brown sugar"
     },
     {
       "id": "product-syrup",
       "description": "A bottle of sweet sugarcane syrup.",
-      "imageUrl": "https://images.unsplash.com/photo-1700104494950-b2ca510a3dd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3lydXAlMjBib3R0bGV8ZW58MHx8fHwxNzYzMTA5MDYxfDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageUrl": "/product4.jpg",
       "imageHint": "syrup bottle"
     },
     {

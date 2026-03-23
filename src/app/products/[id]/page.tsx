@@ -11,7 +11,7 @@ import { Check, Download } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export function generateStaticParams() {
@@ -20,8 +20,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProductDetailPage({ params }: Props) {
-  const product = products.find((p) => p.id === params.id);
+export default async function ProductDetailPage({ params }: Props) {
+  const { id } = await params;
+  const product = products.find((p) => p.id === id);
 
   if (!product) {
     notFound();
