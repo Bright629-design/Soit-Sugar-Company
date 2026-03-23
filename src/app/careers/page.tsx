@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -51,26 +53,7 @@ export default function CareersPage() {
 
   return (
     <div className="bg-background">
-      <header className="relative bg-primary/80 text-primary-foreground py-20 md:py-32">
-        {heroImage && (
-            <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                className="object-cover"
-                data-ai-hint={heroImage.imageHint}
-            />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20"></div>
-        <div className="container relative text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">
-            Join Our Team
-          </h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto">
-            Become a part of a dynamic company dedicated to quality, innovation, and making a positive impact in our community.
-          </p>
-        </div>
-      </header>
+      
       
       <main>
         <header className="relative bg-primary/80 text-primary-foreground py-20 md:py-32 overflow-hidden">

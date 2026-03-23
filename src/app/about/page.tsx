@@ -33,24 +33,7 @@ export default function AboutPage() {
 
   return (
     <div className="bg-background">
-      <header className="relative text-primary-foreground h-[400px]">
-        <Image
-          src="/about1.jpg"
-          alt="Soit Sugar Factory"
-          fill
-          className="object-cover"
-          data-ai-hint="sugar factory"
-        />
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="container relative z-10 flex flex-col items-center justify-center h-full text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">
-            About Soit Sugar Company
-          </h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto">
-            Pioneering a sustainable and prosperous future for Kenya's sugar industry through quality, innovation, and community empowerment.
-          </p>
-        </div>
-      </header>
+      
       
       <main>
         <header className="relative text-primary-foreground h-[400px]">

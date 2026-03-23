@@ -40,7 +40,7 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-transparent">
+    <header className={cn("sticky top-0 z-50 w-full transition-all duration-300", isScrolled ? "bg-background border-b shadow-sm" : "bg-background")}>
         <div className="container mx-auto px-4 flex h-20 items-center justify-between">
             {/* Logo */}
             <a href="/index" className="flex items-center gap-2" aria-label="Soit Sugar Home Page">

@@ -8,16 +8,7 @@ import { Mail, Phone, MessageCircle } from 'lucide-react';
 export default function ContactPage() {
   return (
     <div className="bg-background">
-      <header className="bg-primary/80 text-primary-foreground py-20 md:py-32">
-        <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">
-            Get in Touch
-          </h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto">
-            We're here to help. Whether you have a question about our products or want to request a quote, we'd love to hear from you.
-          </p>
-        </div>
-      </header>
+      
 
       <main>
         <header className="bg-primary/80 text-primary-foreground py-20 md:py-32">

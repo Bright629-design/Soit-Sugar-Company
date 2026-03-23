@@ -30,24 +30,7 @@ const supportPillars = [
 export default function FarmersPage() {
     return (
         <div className="bg-background">
-            <header className="relative bg-primary/80 text-primary-foreground py-20 md:py-32">
-                 <Image
-                    src="/farmers1.jpeg"
-                    alt="A farmer in a sugarcane field."
-                    fill
-                    className="object-cover"
-                    data-ai-hint="sugarcane farmer"
-                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20"></div>
-                <div className="container relative text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold font-headline">
-                        Partners in Growth
-                    </h1>
-                    <p className="mt-4 text-lg max-w-3xl mx-auto">
-                        Our farmers are the backbone of our success. We are dedicated to building strong, mutually beneficial relationships that empower them to thrive.
-                    </p>
-                </div>
-            </header>
+            
 
             <main>
         <header className="relative bg-primary/80 text-primary-foreground py-20 md:py-32 overflow-hidden">

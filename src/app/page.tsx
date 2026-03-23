@@ -21,7 +21,7 @@ const iconMap: { [key: string]: ElementType } = {
 };
 
 // Use the requested images from the public folder for the home header carousel
-const heroImages = ['/soit2.jpeg', '/home3.jpg', '/home4.jpg', '/soit8.jpg', '/soit9.jpg'];
+const heroImages = ['/images/soit2.jpeg', '/images/home3.jpg', '/images/home4.jpg', '/images/soit8.jpg', '/images/soit9.jpg'];
 
 export default function Home() {
   const factoryImage = PlaceHolderImages.find(
@@ -39,28 +39,25 @@ export default function Home() {
         <section
             className="relative h-[95vh] min-h-[700px] w-full flex items-center justify-center text-center text-primary-foreground overflow-hidden">
             {/* Carousel Background */}
-            <div data-carousel className="absolute inset-0 w-full h-full">
-                <div data-carousel-item className="absolute inset-0 w-full h-full block transition-opacity duration-1000">
-                    <img src="/images/soit2.jpeg" alt="Soit Sugar background image 1"
-                        className="object-cover w-full h-full" />
-                </div>
-                <div data-carousel-item className="absolute inset-0 w-full h-full hidden transition-opacity duration-1000">
-                    <img src="/images/home3.jpg" alt="Soit Sugar background image 2"
-                        className="object-cover w-full h-full" />
-                </div>
-                <div data-carousel-item className="absolute inset-0 w-full h-full hidden transition-opacity duration-1000">
-                    <img src="/images/home4.jpg" alt="Soit Sugar background image 3"
-                        className="object-cover w-full h-full" />
-                </div>
-                <div data-carousel-item className="absolute inset-0 w-full h-full hidden transition-opacity duration-1000">
-                    <img src="/images/soit8.jpg" alt="Soit Sugar background image 4"
-                        className="object-cover w-full h-full" />
-                </div>
-                <div data-carousel-item className="absolute inset-0 w-full h-full hidden transition-opacity duration-1000">
-                    <img src="/images/soit9.jpg" alt="Soit Sugar background image 5"
-                        className="object-cover w-full h-full" />
-                </div>
-            </div>
+            <Carousel
+              opts={{ loop: true }}
+              plugins={[plugin.current]}
+              className="absolute inset-0 w-full h-full z-0"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.play}
+            >
+              <CarouselContent className="m-0 h-full">
+                {heroImages.map((src, index) => (
+                  <CarouselItem key={index} className="p-0 h-full relative">
+                    <img
+                      src={src}
+                      alt={`Soit Sugar background image ${index + 1}`}
+                      className="object-cover w-full h-full"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20"></div>
 

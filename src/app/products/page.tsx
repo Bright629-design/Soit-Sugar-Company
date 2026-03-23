@@ -15,25 +15,7 @@ import { MoveRight } from 'lucide-react';
 export default function ProductsPage() {
   return (
     <div className="bg-background">
-      <header className="relative text-primary-foreground h-[400px]">
-        <Image
-          src="/production1.jpg"
-          alt="Sugar production"
-          fill
-          className="object-cover"
-          data-ai-hint="sugar production"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="container relative z-10 flex flex-col items-center justify-center h-full text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">
-            Our Premium Sugar Products
-          </h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto">
-            Explore our range of high-quality sugar products, crafted with
-            purity and precision.
-          </p>
-        </div>
-      </header>
+      
 
       <main>
         <header className="relative text-primary-foreground h-[400px]">

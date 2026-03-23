@@ -51,16 +51,7 @@ const newsArticles = [
 export default function NewsPage() {
   return (
     <div className="bg-background">
-      <header className="bg-primary/80 text-primary-foreground py-20 md:py-32">
-        <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">
-            News & Updates
-          </h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto">
-            Stay informed about the latest developments, stories, and announcements from Soit Sugar Company.
-          </p>
-        </div>
-      </header>
+      
 
       <main>
         <header className="bg-primary/80 text-primary-foreground py-20 md:py-32">

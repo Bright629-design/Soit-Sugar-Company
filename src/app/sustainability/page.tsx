@@ -74,16 +74,7 @@ export default function SustainabilityPage() {
 
   return (
     <div className="bg-background">
-      <header className="bg-primary/80 text-primary-foreground py-20 md:py-32">
-        <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline">
-            Nurturing a Greener Tomorrow
-          </h1>
-          <p className="mt-4 text-lg max-w-3xl mx-auto">
-            Our commitment to sustainability is at the core of everything we do, from the fields we farm to the communities we support.
-          </p>
-        </div>
-      </header>
+      
       
       <main>
         <header className="relative text-primary-foreground h-[400px]">
