@@ -7,13 +7,11 @@ A full-featured corporate website for **Soit Sugar Company**, a sugarcane proces
 ---
 
 ## About
-
 Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, producing high-quality sugar while partnering with local farmers and promoting sustainable practices. This website serves as their digital presence — covering their story, products, sustainability initiatives, farmer partnerships, careers, and a quote request system.
 
 ---
 
 ## Features
-
 - 🏭 **Company Story & Mission** — About page with legacy, values, and commitments
 - 🍬 **Product Catalog** — Refined white sugar, natural brown sugar, sugarcane syrup
 - 🌱 **Sustainability Page** — Eco-friendly practices and environmental commitments
@@ -29,7 +27,6 @@ Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, produ
 ---
 
 ## Tech Stack
-
 - **Framework:** Next.js (React)
 - **Styling:** Tailwind CSS
 - **Deployment:** Vercel
@@ -37,7 +34,6 @@ Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, produ
 ---
 
 ## Pages
-
 | Page | Route |
 |------|-------|
 | Home | `/index` |
@@ -53,7 +49,6 @@ Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, produ
 ---
 
 ## Contact
-
 **Soit Sugar Company**  
 Soit Sugar Factory, Soit, Kenya  
 📧 info@soitsugar.co.ke  
@@ -62,6 +57,5 @@ Soit Sugar Factory, Soit, Kenya
 ---
 
 ## Developer
-
 Built by **Emilio Kipchirchir Cheruiyot**  
 BSc Software Engineering — Multimedia University of Kenya
