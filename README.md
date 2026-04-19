@@ -56,6 +56,5 @@ Soit Sugar Factory, Soit, Kenya
 
 ---
 
-## Developer
 Built by **Emilio Cheruiyot**  
 BSc Software Engineering — Multimedia University of Kenya
