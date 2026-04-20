@@ -1,4 +1,4 @@
-# Soit Sugar Company — Corporate Website
+# Soit Sugar Company 
 
 A full-featured corporate website for **Soit Sugar Company**, a sugarcane processing factory based in Soit, Kenya. Built with Next.js/React and deployed on Vercel.
 
@@ -44,7 +44,6 @@ Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, produ
 | Admin Login | `/admin/login` |
 
 ---
-
 ## Contact
 **Soit Sugar Company**  
 Soit Sugar Factory, Soit, Kenya  
