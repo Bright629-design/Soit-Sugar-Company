@@ -1,6 +1,6 @@
 # Soit Sugar Company 
 
-A full-featured corporate website for **Soit Sugar Company**, a sugarcane processing factory based in Soit, Kenya. Built with Next.js/React and deployed on Vercel.
+A full-featured corporate website for **Soit Sugar Company**, a sugarcane processing factory based in Soit, Kenya. Built with Next.
 
 🔗 **Live Site:** [soit-sugar-company.vercel.app](https://soit-sugar-company.vercel.app)
 ---
