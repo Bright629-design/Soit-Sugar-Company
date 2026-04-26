@@ -32,7 +32,6 @@ Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, produ
 ---
 ## Pages
 | Page | Route |
-|------|-------|
 | Home | `/index` |
 | About Us | `/about` |
 | Products | `/products` |
@@ -51,6 +50,5 @@ Soit Sugar Factory, Soit, Kenya
 📞 +254 123 456 789
 
 ---
-
 Built by **Emilio Cheruiyot**  
 BSc Software Engineering — Multimedia University of Kenya
