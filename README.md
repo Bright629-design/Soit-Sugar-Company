@@ -2,7 +2,7 @@
 
 A full-featured corporate website for **Soit Sugar Company**, a sugarcane processing factory based in Soit, Kenya. 
 
-🔗 **Live Site:** [soit-sugar-company.vercel.app](https://soit-sugar-company.vercel.app)
+🔗 **Site:** [soit-sugar-company.vercel.app](https://soit-sugar-company.vercel.app)
 ---
 ## About
 Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, producing high-quality sugar while partnering with local farmers and promoting sustainable practices. This website serves as their digital presence — covering their story, products, sustainability initiatives, farmer partnerships, careers, and a quote request system.
