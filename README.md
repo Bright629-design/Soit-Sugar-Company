@@ -10,17 +10,17 @@ Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, produ
 ---
 
 ## Features
-- 🏭 **Company Story & Mission** — About page with legacy, values, and commitments
-- 🍬 **Product Catalog** — Refined white sugar, natural brown sugar, sugarcane syrup
-- 🌱 **Sustainability Page** — Eco-friendly practices and environmental commitments
-- 👨‍🌾 **Farmers Portal** — Dedicated section for farmer partnerships and community programs
-- 📰 **News Section** — Company updates and announcements
-- 💼 **Careers Page** — Job listings and opportunities
-- 📋 **Quote Request** — Business inquiry and partnership form
-- 🔐 **Admin Login** — Backend access for content/admin management
-- 📧 **Newsletter Subscription** — Stay-updated email capture
-- 📱 **Responsive Design** — Mobile-friendly with hamburger navigation
-- 🖼️ **Hero Carousel** — Full-screen image slideshow (5 slides)
+-  **Company Story & Mission** — About page with legacy, values, and commitments
+-  **Product Catalog** — Refined white sugar, natural brown sugar, sugarcane syrup
+-  **Sustainability Page** — Eco-friendly practices and environmental commitments
+- **Farmers Portal** — Dedicated section for farmer partnerships and community programs
+-  **News Section** — Company updates and announcements
+-  **Careers Page** — Job listings and opportunities
+- **Quote Request** — Business inquiry and partnership form
+- **Admin Login** — Backend access for content/admin management
+-  **Newsletter Subscription** — Stay-updated email capture
+-  **Responsive Design** — Mobile-friendly with hamburger navigation
+-  **Hero Carousel** — Full-screen image slideshow (5 slides)
 
 ---
 
