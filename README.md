@@ -23,7 +23,6 @@ Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, produ
 -  **Hero Carousel** — Full-screen image slideshow (5 slides)
 
 ---
-
 ## Tech Stack
 - **Framework:** Next.js (React)
 - **Styling:** Tailwind CSS
@@ -51,4 +50,4 @@ Soit Sugar Factory, Soit, Kenya
 
 ---
 Built by **Emilio Cheruiyot**  
-BSc Software Engineering — Multimedia University of Kenya
+BSc Software Engineering — MMU
