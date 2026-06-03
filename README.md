@@ -25,7 +25,7 @@ Soit Sugar Company is a community-driven enterprise in Kenya's sugar belt, produ
 ---
 ## Tech Stack
 - **Framework:** Next.js (React)
-- **Styling:** Tailwind CSS
+- **Styling:**  CSS
 - **Deployment:** Vercel
 
 ---
